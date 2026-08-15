@@ -1,0 +1,9 @@
+node.js permite usar JS fora do navegador
+npm é o gerenciador de pacotes do node . js
+npm init - y gera o arquivo package.json
+npm install cria as rotas com o servidor http
+npm  install bcryptjs criptografa as senhas
+npm install jsonwbtoken gera o token da sessão para o login
+npm install jsonwbtoken dotenv mongoose realiza a conexaõ e o gerenciamento com o banco de dados mongo
+Docker cria  ambiente padronizado para rodar o sitema
+npm install--save dev nodemon reponsavel por reiniciar o servidor de forma automática,após realizar alguma alteração no código
