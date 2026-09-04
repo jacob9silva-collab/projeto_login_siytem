@@ -8,21 +8,20 @@ const express = require ( 'express' );
  const app = express ();
  const PORTA = 3001 ;
 
- //Middlewares principais
+ // Middlewares principais
+app.use(cors());
 
- app.use ( cors ()) ;
- //Escreve e lê requisições de arquivos JSON
- app.use ( express.json ( ) )
+// Escreve e lê requisições de arquivos JSON
+app.use(express.json());
 
- app.use ( express.static ( path.join ( __ dirname , '../frontend' )));
+app.use(express.static(path.join(__dirname, '../frontend')));
 
- app.use ( "/api" , authRouts ) ;
+app.use("/api", authRouts);
 
- app.get ( '/' , ( req , res ) = > {
-    res.sendFile ( path.join ( __ dirname , ' ../frontend/index.html ' ) );
- } );
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '../frontend/index.html'));
+});
 
- app.listen ( PORT , () = > {
-    console . log ( `Servidor rodando em http://localhost : ${ PORT } ` );
- } );
-
+app.listen(PORTA, () => {
+    console.log('Servidor rodando em http://localhost:${PORTA}');
+});
